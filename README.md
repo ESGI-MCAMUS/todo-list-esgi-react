@@ -1,4 +1,6 @@
-# Getting Started with TODO List
+# TODO List React App
+
+This project has been created and maintained by [@MisterGoodDeal](https://github.com/MisterGoodDeal), [@ThomasGeoffron](https://github.com/ThomasGeoffron) and [@Haborym](https://github.com/Haborym) for the course `Test unitaire @ ESGI`.
 
 First things first, you have to clone 2 projects:
 - Frontend (React App)
