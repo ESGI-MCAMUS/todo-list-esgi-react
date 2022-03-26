@@ -16,3 +16,9 @@ You also need to run a database locally (XAMP, WAMP...). Please refer to the [`R
 
 Run the command `npm start` to launche the React App. You can access it via [http://localhost:3000](http://localhost:3000).
 
+## Running tests
+
+In order to run tests, you **MUST** start the database and the backend first, then the React project.
+
+In order to run test, type `npm run test:e2e` in the terminal.
+
