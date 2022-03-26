@@ -4,6 +4,8 @@ First things first, you have to clone 2 projects:
 - Frontend (React App)
 - Backend (NodeJS + Express app)
 
+Then install all dependencies on both projects with the command `npm install`.
+
 You also need to run a database locally (XAMP, WAMP...). Please refer to the [`README.md` of the backend](https://github.com/MisterGoodDeal/todo-list-esgi-server) to run it properly
 
 ## Start the app
