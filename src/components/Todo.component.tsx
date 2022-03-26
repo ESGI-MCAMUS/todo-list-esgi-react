@@ -45,8 +45,11 @@ export const Todo: React.FunctionComponent<TodoProps> = ({
         <h2
           style={{
             color: Colors.white,
+            fontSize: "2vw",
             fontFamily: "Inter",
             fontWeight: "bold",
+            whiteSpace: "pre-wrap",
+            overflowWrap: "break-word",
           }}
         >
           {name}
