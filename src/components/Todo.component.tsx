@@ -43,6 +43,8 @@ export const Todo: React.FunctionComponent<TodoProps> = ({
         }}
       >
         <h2
+          id={"todo-name-" + id}
+          className="todo-name"
           style={{
             color: Colors.white,
             fontSize: "2vw",
@@ -55,6 +57,8 @@ export const Todo: React.FunctionComponent<TodoProps> = ({
           {name}
         </h2>
         <BsTrash
+          id={"todo-delete-" + id}
+          className="todo-delete"
           onClick={() => handleRemoveTodo()}
           style={{
             color: Colors.white,
@@ -64,6 +68,8 @@ export const Todo: React.FunctionComponent<TodoProps> = ({
         />
       </div>
       <p
+        id={"todo-content-" + id}
+        className="todo-content"
         style={{
           color: Colors.white,
           fontFamily: "Inter",
@@ -76,6 +82,8 @@ export const Todo: React.FunctionComponent<TodoProps> = ({
         {children}
       </p>
       <p
+        id={"todo-date-" + id}
+        className="date"
         style={{
           color: Colors.white,
           fontFamily: "Inter",

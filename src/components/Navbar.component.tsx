@@ -29,6 +29,7 @@ export const Navbar: React.FunctionComponent<NavbarProps> = ({
       <Nav.Item>
         <Link
           to="/"
+          id="home-link"
           style={{
             color: Colors.white,
             marginLeft: "20px",
@@ -46,6 +47,7 @@ export const Navbar: React.FunctionComponent<NavbarProps> = ({
         <>
           <Nav.Item>
             <Link
+              id="login-link"
               to="/connexion"
               style={{
                 color: Colors.white,
@@ -63,6 +65,7 @@ export const Navbar: React.FunctionComponent<NavbarProps> = ({
           </Nav.Item>
           <Nav.Item>
             <Link
+              id="register-link"
               to="/inscription"
               style={{
                 color: Colors.white,
@@ -84,6 +87,7 @@ export const Navbar: React.FunctionComponent<NavbarProps> = ({
         <>
           <Nav.Item>
             <Link
+              id="todos-link"
               to="/todos"
               style={{
                 color: Colors.white,
@@ -100,6 +104,7 @@ export const Navbar: React.FunctionComponent<NavbarProps> = ({
           </Nav.Item>
           <Nav.Item>
             <Link
+              id="logout-link"
               to="/deconnexion"
               style={{
                 color: Colors.white,

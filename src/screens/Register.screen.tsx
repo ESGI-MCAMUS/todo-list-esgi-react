@@ -66,6 +66,7 @@ export const Register: React.FunctionComponent<RegisterProps> = ({}) => {
           }}
         >
           <h1
+            id="register-title"
             style={{
               color: Colors.white,
               fontFamily: "Inter",
@@ -79,6 +80,7 @@ export const Register: React.FunctionComponent<RegisterProps> = ({}) => {
           <Spacer />
           <InputGroup className="mb-3">
             <FormControl
+              id="firstname"
               placeholder="Prénom"
               onChange={(e) => setFirsname(e.target.value)}
             />
@@ -86,6 +88,7 @@ export const Register: React.FunctionComponent<RegisterProps> = ({}) => {
           <Spacer />
           <InputGroup className="mb-3">
             <FormControl
+              id="lastname"
               placeholder="Nom"
               onChange={(e) => setLastname(e.target.value)}
             />
@@ -93,7 +96,8 @@ export const Register: React.FunctionComponent<RegisterProps> = ({}) => {
           <Spacer />
           <InputGroup className="mb-3">
             <FormControl
-              placeholder="Email"
+              id="birthdate"
+              placeholder="Date de naissance"
               onChange={(e) => setBirthdate(e.target.value)}
               type="date"
             />
@@ -101,6 +105,7 @@ export const Register: React.FunctionComponent<RegisterProps> = ({}) => {
           <Spacer />
           <InputGroup className="mb-3">
             <FormControl
+              id="email"
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -108,19 +113,21 @@ export const Register: React.FunctionComponent<RegisterProps> = ({}) => {
           <Spacer />
           <InputGroup className="mb-3">
             <FormControl
+              id="password"
               placeholder="Mot de passe"
               onChange={(e) => setPassword(e.target.value)}
               type="password"
             />
           </InputGroup>
           <Spacer />
-          <Button variant="dark" onClick={() => handleConnect()}>
+          <Button id="submit" variant="dark" onClick={() => handleConnect()}>
             S'inscrire
           </Button>
           {error !== "" && (
             <div>
               <Spacer />
               <p
+                id="error-msg"
                 style={{
                   color: Colors.error,
                   fontFamily: "Inter",

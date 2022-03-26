@@ -60,6 +60,7 @@ export const Login: React.FunctionComponent<LoginProps> = ({}) => {
           }}
         >
           <h1
+            id="login-title"
             style={{
               color: Colors.white,
               fontFamily: "Inter",
@@ -73,6 +74,7 @@ export const Login: React.FunctionComponent<LoginProps> = ({}) => {
           <Spacer />
           <InputGroup className="mb-3">
             <FormControl
+              id="email"
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -80,19 +82,25 @@ export const Login: React.FunctionComponent<LoginProps> = ({}) => {
           <Spacer />
           <InputGroup className="mb-3">
             <FormControl
+              id="password"
               placeholder="Mot de passe"
               onChange={(e) => setPassword(e.target.value)}
               type="password"
             />
           </InputGroup>
           <Spacer />
-          <Button variant="dark" onClick={() => handleConnect()}>
+          <Button
+            id="loginButton"
+            variant="dark"
+            onClick={() => handleConnect()}
+          >
             Se connecter
           </Button>
           {error !== "" && (
             <div>
               <Spacer />
               <p
+                id="error-msg"
                 style={{
                   color: Colors.error,
                   fontFamily: "Inter",

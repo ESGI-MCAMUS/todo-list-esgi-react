@@ -80,6 +80,7 @@ export const Todo: React.FunctionComponent<TodoProps> = ({}) => {
         }}
       >
         <Button
+          id="modal"
           variant="success"
           onClick={() => setShow(true)}
           style={{
@@ -113,6 +114,7 @@ export const Todo: React.FunctionComponent<TodoProps> = ({}) => {
           <Modal.Body>
             <InputGroup className="mb-3">
               <FormControl
+                id="title"
                 placeholder="Titre"
                 onChange={(e) => setTitre(e.target.value)}
               />
@@ -120,6 +122,7 @@ export const Todo: React.FunctionComponent<TodoProps> = ({}) => {
             <Spacer />
             <InputGroup className="mb-3">
               <FormControl
+                id="content"
                 placeholder="Contenu"
                 onChange={(e) => setContenu(e.target.value)}
                 as="textarea"
@@ -129,6 +132,7 @@ export const Todo: React.FunctionComponent<TodoProps> = ({}) => {
               <div>
                 <Spacer />
                 <p
+                  id="error-msg"
                   style={{
                     color: Colors.error,
                     fontFamily: "Inter",
@@ -141,7 +145,11 @@ export const Todo: React.FunctionComponent<TodoProps> = ({}) => {
             )}
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="success" onClick={() => handleAddTodo()}>
+            <Button
+              id="submit"
+              variant="success"
+              onClick={() => handleAddTodo()}
+            >
               Ajouter
             </Button>
             <Button variant="danger" onClick={() => handleClose()}>
@@ -164,6 +172,7 @@ export const Todo: React.FunctionComponent<TodoProps> = ({}) => {
           }}
         >
           <h1
+            id="todos-title"
             style={{
               color: Colors.white,
               fontFamily: "Inter",
@@ -190,7 +199,6 @@ export const Todo: React.FunctionComponent<TodoProps> = ({}) => {
           {todos.map((todo) => (
             <>
               <TodoComponent
-                key={todo.id}
                 id={todo.id}
                 name={todo.name}
                 date={new Date(todo.created_at)}

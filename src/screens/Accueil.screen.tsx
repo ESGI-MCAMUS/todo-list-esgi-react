@@ -19,6 +19,7 @@ export const Accueil: React.FunctionComponent<AccueilProps> = ({}) => (
     >
       <div>
         <h1
+          id="main-title"
           style={{
             color: Colors.white,
             fontFamily: "Inter",
