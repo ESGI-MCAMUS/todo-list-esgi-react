@@ -35,7 +35,12 @@ export const Todo: React.FunctionComponent<TodoProps> = ({}) => {
   const fetchTodos = () => {
     (async () => {
       const todosFetch: TodoInterface[] = await getTodos();
-      setTodos(todosFetch);
+      // @ts-ignore
+      if (todosFetch.title === "unauthorized") {
+        setRedirectTo("/deconnexion");
+      } else {
+        setTodos(todosFetch);
+      }
     })();
   };
 
@@ -49,7 +54,9 @@ export const Todo: React.FunctionComponent<TodoProps> = ({}) => {
 
     (async () => {
       const response: AddTodosResponse = await addTodo(titre, contenu);
-      if (response.title === "todo_created") {
+      if (response.title === "unauthorized") {
+        setRedirectTo("/deconnexion");
+      } else if (response.title === "todo_created") {
         fetchTodos();
         handleClose();
       } else {
